@@ -41,7 +41,8 @@ class ListUserOnline extends React.Component {
     }
 
     // DONT FORGET TO CHANGE TO YOUR URL
-    this.serviceIP = 'http://192.168.61.184:8082/webrtcPeerOnlineUser'
+    // this.serviceIP = 'http://192.168.1.11:8082/webrtcPeerOnlineUser'
+    this.serviceIP = 'https://api-webrtc-mwg.herokuapp.com/webrtcPeerOnlineUser'
 
     // this.sdp
     this.socket = null
@@ -115,7 +116,9 @@ class ListUserOnline extends React.Component {
       <View style={styles.container}>
         {this.state.requestCalling || this.state.acceptCalling ? (
           this.state.requestCalling ?
-            <RoomCalling setStateCalling={this.setStateCalling} IdRoom={this.state.IdRequestToCall} /> : <RoomCalling setStateCalling={this.setState} IdRoom={this.state.linkMeet} />) :
+            <RoomCalling setStateCalling={this.setStateCalling} IdRoom={this.state.IdRequestToCall} />
+            :
+            <RoomCalling setStateCalling={this.setStateCalling} IdRoom={this.state.linkMeet} />) :
           <View>
             {this.state.isModalVisible ?
               <View>
