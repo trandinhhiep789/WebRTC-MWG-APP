@@ -1,1 +1,1 @@
-# webrtc demo
+# WebRTC-MWG-APP => use mobileApp/webrtc
