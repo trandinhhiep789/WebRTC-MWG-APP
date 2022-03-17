@@ -1,110 +1,3 @@
-// import React from 'react';
-// import io from 'socket.io-client'
-// import { FlatList, StyleSheet, Text, View, Alert, Modal, Pressable } from 'react-native';
-// import { color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
-
-// const styles = StyleSheet.create({
-//     container: {
-//         flex: 1,
-//         paddingTop: 22
-//     },
-//     item: {
-//         padding: 10,
-//         fontSize: 17,
-//         height: 50,
-//     }
-// });
-
-// class ListUserOnline extends React.Component {
-//     constructor(props) {
-//         super(props)
-
-//         this.state = {
-//             myId: '',
-//             listUserOnline: [],
-//             isModalVisible: false
-//         }
-
-//         // DONT FORGET TO CHANGE TO YOUR URL
-//         this.serviceIP = 'https://ed2a-222-253-48-179.ngrok.io/webrtcPeerOnlineUser'
-
-//         // this.sdp
-//         this.socket = null
-//         // this.candidates = []
-//     }
-
-//     componentDidMount = () => {
-//         this.socket = io.connect(
-//             this.serviceIP,
-//             {
-//                 path: '/io/webrtc',
-//                 query: {
-//                     username: ""
-//                 }
-//             }
-//         )
-//         this.socket.on("myId", myId => {
-//             this.setState({ myId })
-//         })
-//         this.socket.emit('addUser', "hiep")
-//         this.socket.on("getUserOnline", userList => {
-//             console.log(userList)
-//             userList = userList.filter((user) => user.id !== this.state.myId)
-//             this.setState({ listUserOnline: userList })
-//         })
-//         this.socket.on("getLinkToCall", ({ senderId, link }) => {
-//             this.setState({ isModalVisible: true })
-//             // console.log(senderId, link)
-//             // this.setState({
-//             //     nguoiGoiDen: senderId,
-//             //     linkMeet: link,
-//             // })
-//             // this.showConfirm(senderId, link)
-//         })
-//     }
-
-//     setModalVisible = (visible) => {
-//         this.setState({ isModalVisible: visible });
-//     }
-
-//     makeid = (length) => {
-//         let result = '';
-//         let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-//         let charactersLength = characters.length;
-//         for (let i = 0; i < length; i++) {
-//             result += characters.charAt(Math.floor(Math.random() * charactersLength));
-//         }
-//         return result;
-//     }
-
-//     callUser = (id) => {
-//         const id_room = this.makeid(7)
-
-//         this.socket.emit('sendLinkToCall', {
-//             senderId: '123123',
-//             receiverId: id,
-//             link: id_room
-//         })
-//     }
-
-//     render() {
-//         return (
-//             <View style={styles.container}>
-//                 {this.state.isModalVisible ? <Text style={{ color: "blue", fontWeight: 'bold' }}>Co ng dang goi: </Text> : <Text></Text>}
-//                 <Text style={{ color: "blue", fontWeight: 'bold' }}>Mã ID của bạn: </Text>
-//                 <Text style={styles.item}>{this.state.myId.substring(this.state.myId.indexOf("#"), this.state.myId.length)}</Text>
-//                 <Text style={{ color: "green", fontWeight: 'bold' }}>Danh sách người dùng đang online: </Text>
-//                 <FlatList
-//                     data={this.state.listUserOnline}
-//                     renderItem={({ item }) => <Text onPress={() => { this.callUser(item.id) }} style={styles.item}>{item.id.substring(item.id.indexOf("#"), item.id.length)}</Text>}
-//                 />
-//             </View>
-//         )
-//     }
-
-// }
-
-// export default ListUserOnline;
 
 
 /**
@@ -196,6 +89,7 @@ class RoomCalling extends React.Component {
 
     // DONT FORGET TO CHANGE TO YOUR URL
     // this.serviceIP = 'http://192.168.1.11:8082/webrtcPeer'
+    // this.serviceIP = 'http://10.152.82.207:8082/webrtcPeer'
     this.serviceIP = 'https://api-webrtc-mwg.herokuapp.com/webrtcPeer'
 
     // this.sdp
