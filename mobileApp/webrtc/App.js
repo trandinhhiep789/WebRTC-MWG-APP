@@ -104,11 +104,11 @@ class ListUserOnline extends React.Component {
     });
   };
 
-  componentWillUnmount = () => {
+  // componentWillUnmount = () => {
 
-    BackgroundService.start(this.veryIntensiveTask, options);
-    BackgroundService.updateNotification({ taskDesc: 'New ExampleTask description' });
-  }
+  //   BackgroundService.start(this.veryIntensiveTask, options);
+  //   BackgroundService.updateNotification({ taskDesc: 'New ExampleTask description' });
+  // }
 
   componentDidMount = () => {
 
