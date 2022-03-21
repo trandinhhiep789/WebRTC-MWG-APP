@@ -88,9 +88,9 @@ class RoomCalling extends React.Component {
     }
 
     // DONT FORGET TO CHANGE TO YOUR URL
-    // this.serviceIP = 'http://192.168.1.11:8082/webrtcPeer'
-    // this.serviceIP = 'http://10.152.82.207:8082/webrtcPeer'
-    this.serviceIP = 'https://api-webrtc-mwg.herokuapp.com/webrtcPeer'
+    this.serviceIP = 'http://192.168.1.6:8082/webrtcPeer'
+
+    // this.serviceIP = 'https://api-webrtc-mwg.herokuapp.com/webrtcPeer'
 
     // this.sdp
     this.socket = null

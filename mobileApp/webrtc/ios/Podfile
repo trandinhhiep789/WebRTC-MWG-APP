@@ -55,6 +55,8 @@ target 'webrtc' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
   pod 'react-native-webrtc', :path => '../node_modules/react-native-webrtc'
 
+  pod 'react-native-background-actions', :path => '../node_modules/react-native-background-actions'
+
   target 'webrtcTests' do
     inherit! :complete
     # Pods for testing

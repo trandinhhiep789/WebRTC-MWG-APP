@@ -1,18 +1,19 @@
 import React from 'react'
 import { View, Text, Button } from 'react-native';
-import IconEntypo from 'react-native-vector-icons/Entypo'
-import IconFeather from 'react-native-vector-icons/Feather'
+import IconFontAwesome from 'react-native-vector-icons/FontAwesome'
 
 const Avatar = (props) => {
     return (
         <View style={{
-            padding: 10
+            padding: 10,
         }}>
             <View style={{
                 flexDirection: 'row',
                 justifyContent: 'space-between',
                 borderRadius: 50,
-                backgroundColor: 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3))'
+                backgroundColor: 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3))',
+                borderWidth: 2,
+                borderColor: 'rgba(144, 202, 249, 0.46)',
             }}>
                 <View style={{
                     display: 'flex',
@@ -75,8 +76,8 @@ const Avatar = (props) => {
                 >
                     {props.fontColor !== "#fff" ?
                         <View style={{ flexDirection: 'row' }}>
-                            <IconEntypo style={{ marginRight: 10 }} onPress={() => props.callUser(props.id)} name="phone" size={30} color="#ffce54" />
-                            <IconFeather onPress={() => props.callUser(props.id)} name="video" size={30} color="#ffce54" />
+                            <IconFontAwesome style={{ marginRight: 15 }} onPress={() => props.callUser(props.id)} name="phone" size={25} color="#ffce54" />
+                            <IconFontAwesome onPress={() => props.callUser(props.id)} name="video-camera" size={25} color="#ffce54" />
                         </View>
                         : <Text />}
 
